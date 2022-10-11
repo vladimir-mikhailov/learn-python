@@ -9,4 +9,10 @@
 
 day_number = int(input('Введите номер дня: '))
 
-print('Нет' if 0 < day_number < 6 else 'Да')
+match day_number:
+    case 6 | 7:
+        print('Выходной')
+    case range(1, 6):
+        print('Будня!')
+    case _:
+        print('Неправильный день')
