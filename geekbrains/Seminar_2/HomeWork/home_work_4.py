@@ -5,9 +5,10 @@
 from random import randint
 
 try:
-    file = open('file.txt', 'r', encoding='utf-8')
-    lines = file.readlines()
+    with open('file.txt', 'r', encoding='utf-8') as file:
+        lines = file.readlines()
 
+    print()
     while len(lines) > 0:
         try:
             n = int(
@@ -16,25 +17,26 @@ try:
             print('Good Bye!')
             break
 
-        range_n = [randint(-n, n) for i in range(n - 1)]
-
-        products = {}
+        random_values = [randint(-n, n) for i in range(n)]
+        print()
+        positions_and_values = {}
 
         for line in lines:
             try:
                 i = int(line)
-                products[i] = range_n[i]
+                positions_and_values[i] = random_values[i]
             except ValueError:
                 print(f'\nНевозможно спарсить {line}')
             except IndexError:
                 print(
-                    f'Элемента с индексом {i} не существует (от 0 до {len(range_n) - 1})')
+                    f'Элемента с индексом {i} не существует (от 0 до {len(random_values) - 1})')
 
-        print(f'\nЗначения элементов на указанных позициях: {products}\n')
+        print(
+            f'\nЗначения элементов на указанных позициях: {positions_and_values}\n')
 
-        if len(products) > 0:
+        if len(positions_and_values) > 0:
             product = 1
-            for value in products.values():
+            for value in positions_and_values.values():
                 product *= value
 
             print(f'Произведение значений: {product}\n')
