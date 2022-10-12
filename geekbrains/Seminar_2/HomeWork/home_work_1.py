@@ -3,19 +3,17 @@
 # 6782 -> 23
 # 0,56 -> 11
 
-# Получаем и переводим во float, чтобы исключить неправильный ввод.
-# Число с нулевой дробной частью тоже принимается.
-while True:
-    try:
-        num = float(
-            input('Введите число с плавающей точкой (или любой символ, чтобы выйти): '))
-    except ValueError:
-        print('Введено не число. Goodbye!')
-        break
+from re import subn
+from functools import reduce
+from decimal import Decimal
 
-    sum_of_digits = 0
-    for digit in str(abs(num)):
-        if digit != '.':
-            sum_of_digits += int(digit)
+num = input('Введите число с плавающей точкой: ')
 
-    print(f'Сумма цифр: {sum_of_digits}')
+# Через Decimal.as_tuple:
+print(reduce(lambda x, y: x + y, Decimal(num).as_tuple().digits))
+
+# Через строку и str.replace():
+print(reduce(lambda x, y: int(x) + int(y), num.replace('-', '').replace('.', '')))
+
+# Через замену по RegExp
+print(reduce(lambda x, y: int(x) + int(y), subn('[-/.]', '', num)[0]))
