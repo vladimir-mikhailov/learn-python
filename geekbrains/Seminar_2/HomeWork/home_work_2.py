@@ -15,6 +15,8 @@ while True:
         break
 
     print()
+
+    # Через цикл for:
     print('Через for:')
     start_time = time()
 
@@ -27,6 +29,7 @@ while True:
     print(result_iterator[1:])
     print(f'Выполнено за {(finish_time - start_time):0.8f} секунд\n')
 
+    # Через рекурсию:
     print('Через рекурсию:')
     start_time = time()
 
