@@ -9,8 +9,8 @@ from random import randint
 
 n = int(input('Длина списка: '))
 
-lst = [str(randint(0, 1000) / 100) for i in range(n)]
+lst = [randint(0, 1000) / 100 for i in range(n)]
 
-afterpoints = [round(float(el) - float(el.split('.')[0]), 2) for el in lst]
+afterpoints = [el - float(str(el).split('.')[0]) for el in lst]
 
-print(f'{lst} -> {max(afterpoints) - min(afterpoints)}')
+print(f'{lst} -> {round(max(afterpoints) - min(afterpoints), 2)}')
