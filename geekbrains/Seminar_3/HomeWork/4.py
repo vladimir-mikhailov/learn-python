@@ -11,8 +11,7 @@ def to_binary(n):
     while n // 2 > 0:
         bin_n = str(n % 2) + bin_n
         n //= 2
-    else:
-        bin_n = str(n) + bin_n
+    bin_n = str(n) + bin_n
     return bin_n
 
 
