@@ -21,8 +21,8 @@ while True:
     print('Через for:\n')
     start_time = perf_counter()
 
-    sum = 0
-    result = [sum := sum + (1 + 1 / i) ** i for i in range(1, n + 1)]
+    total = 0
+    result = [total := total + (1 + 1 / i) ** i for i in range(1, n + 1)]
 
     finish_time = perf_counter()
     time_for = finish_time - start_time

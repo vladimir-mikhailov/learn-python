@@ -1,6 +1,6 @@
 # 5. Реализуйте алгоритм перемешивания списка
 
-from random import randint
+from random import randint, shuffle
 
 while True:
     try:
@@ -15,10 +15,14 @@ while True:
         break
 
     lst = [randint(0, 101) for i in range(length)]
-    print(f'Исходный список:     {lst}')
+    print(f'Исходный список:      {lst}')
 
     for i in range(length):
         rnd = randint(0, length - 1)
         lst[i], lst[rnd] = lst[rnd], lst[i]
 
-    print(f'Перемешанный список: {lst}')
+    print(f'Перемешанный список : {lst}')
+
+    # Через random.shuffle
+    shuffle(lst)
+    print(f'Перемешанный шаффлом: {lst}')

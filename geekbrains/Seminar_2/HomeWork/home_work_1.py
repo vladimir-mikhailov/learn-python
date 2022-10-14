@@ -4,16 +4,30 @@
 # 0,56 -> 11
 
 from re import subn
-from functools import reduce
 from decimal import Decimal
 
 num = input('Введите число с плавающей точкой: ')
 
 # Через Decimal.as_tuple:
-print(reduce(lambda x, y: x + y, Decimal(num).as_tuple().digits))
+print(sum(Decimal(num).as_tuple().digits))
 
 # Через строку и str.replace():
-print(reduce(lambda x, y: int(x) + int(y), num.replace('-', '').replace('.', '')))
+print(sum(map(int, num.replace('-', '').replace('.', ''))))
 
 # Через замену по RegExp
-print(reduce(lambda x, y: int(x) + int(y), subn('[-/.]', '', num)[0]))
+print(sum(map(int, subn('[-/.]', '', num)[0])))
+
+# Через map
+print(sum(map(int, (c for c in num if c.isdecimal()))))
+
+# Через математику:
+num = Decimal(num)
+
+while int(num) != num:
+    num *= 1
+
+result = 0
+while num:
+    result += num % 10
+    num //= 10
+print(result)
