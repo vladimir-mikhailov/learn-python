@@ -11,6 +11,6 @@ n = int(input('Длина списка: '))
 
 lst = [randint(0, 1000) / 100 for i in range(n)]
 
-afterpoints = [el - float(str(el).split('.')[0]) for el in lst]
+afterpoints = [el % 1 for el in lst]
 
 print(f'{lst} -> {round(max(afterpoints) - min(afterpoints), 2)}')
