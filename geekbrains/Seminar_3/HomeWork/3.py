@@ -5,11 +5,11 @@
 
 # - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
-from random import randint
+from random import uniform
 
 n = int(input('Длина списка: '))
 
-lst = [randint(0, 1000) / 100 for i in range(n)]
+lst = [round(uniform(0, 1), 2) for i in range(n)]
 
 afterpoints = [el % 1 for el in lst]
 
