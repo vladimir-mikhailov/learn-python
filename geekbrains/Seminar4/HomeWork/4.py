@@ -8,14 +8,30 @@
 
 from random import randint
 
-from numpy.polynomial import Polynomial as P
-
 k = int(input('Введите натуральную степепь многочлена: '))
 
-coefficients = [randint(0, 100) for i in range(k + 1)]
+coefficients = {i: randint(0, 10) for i in range(k + 1)}
 
-p = ' + '.join(reversed(str(P(coefficients)).replace('·',
-               '*').replace('.0', '').split(' + ')))
+
+def get_polynome(coefficients):  # функция будет переиспользована в 5 задаче
+    lst = []
+    for i in reversed(coefficients):
+        if coefficients[i] != 0:
+            if i == 0:
+                lst.append(f'{coefficients[i]}')
+            elif i == 1:
+                lst.append(
+                    f'{coefficients[i] if coefficients[i] != 1 else ""}x')
+            elif i > 1:
+                lst.append(
+                    f'{coefficients[i] if coefficients[i] != 1 else ""}x^{i}')
+    p = ' + '.join(lst)
+    p += ' = 0'
+
+    return p
+
+
+# print('\n', get_polynome(coefficients), '\n')
 
 with open('manydick.txt', 'w', encoding='utf-8') as file:
-    file.write(f'k = {k} => {p} = 0')
+    file.write(get_polynome(coefficients))
