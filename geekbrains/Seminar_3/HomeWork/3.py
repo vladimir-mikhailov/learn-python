@@ -9,8 +9,8 @@ from random import uniform
 
 n = int(input('Длина списка: '))
 
-lst = [round(uniform(0, 1), 2) for i in range(n)]
+lst = [round(uniform(0, 10), 2) for i in range(n)]
 
 afterpoints = [el % 1 for el in lst]
 
-print(f'{lst} -> {round(max(afterpoints) - min(afterpoints), 2)}')
+print(f'{lst} -> {max(afterpoints) - min(afterpoints):.2f}')

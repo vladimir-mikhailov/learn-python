@@ -8,9 +8,10 @@
 
 def to_binary(n):
     bin_n = ''
-    while n // 2 > 0:
+    while n // 2:
         bin_n = str(n % 2) + bin_n
-        n //= 2
+        # n //= 2
+        n >>= 1  # побитовый сдвиг
     bin_n = str(n) + bin_n
     return bin_n
 

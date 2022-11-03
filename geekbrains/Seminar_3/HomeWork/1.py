@@ -10,8 +10,13 @@ from random import randint
 
 def sum_odds(n):
     lst = [randint(1, 10) for i in range(n)]
-    odds = [lst[i] for i in range(1, n, 2)]
+
+    # 1 вариант: через срез
+    odds = lst[1:n:2]  # нечётные индексы
     print(f'{lst} -> на нечётных позициях элементы {" и ".join(map(str, odds))}. Сумма: {sum(odds)}')
+
+    # 2 вариант. Через enumerate.
+    print(sum(y for x, y in enumerate(lst) if x % 2 != 0))
 
 
 while True:
@@ -20,6 +25,7 @@ while True:
         n = int(n)
         print()
         sum_odds(n)
+
     except ValueError:
         print('\nGood Bye!\n')
         break
