@@ -3,4 +3,4 @@
 
 lst = [1, 1, 2, 3, 5, 6, 7, 7]
 
-print([x for x in lst if lst.count(x) == 1])
+print([x for x in set(lst) if lst.count(x) == 1])
