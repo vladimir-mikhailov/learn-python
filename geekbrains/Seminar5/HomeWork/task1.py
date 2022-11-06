@@ -9,7 +9,7 @@ txt_lst = [x for x in txt.translate(translation_map).split()]
 
 # Здесь можно описать все варианты знаков препинания, но это долго
 for word in txt_lst:
-    if set(letters).issubset(set(word.casefold())):
+    if set(letters.casefold()).issubset(set(word.casefold())):
         txt = txt \
             .replace(' ' + word, '') \
             .replace(word + ' ', '') \
