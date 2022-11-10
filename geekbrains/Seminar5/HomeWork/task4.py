@@ -17,6 +17,7 @@ def encode(source_filename, target_filename):
                 encoded += str(count) + str(s[i-1])
             else:
                 encoded += str(s[i-1])
+            # FIXME: Никаких других символов, кроме тех что присутствуют в строке, в зашифрованной строке быть не должно
             if encoded[-1].isdigit():
                 encoded += '▹'
             count = 1

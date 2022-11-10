@@ -13,13 +13,13 @@
 
 from random import randint
 
-pot = 2021
+pot = 56
 max_take = 28
 
 rest_in_pot = pot
 
 
-def get_quantity(player, pot, rest_in_pot, max_take, prev_take):
+def get_quantity(player, pot, rest_in_pot, max_take):
     if player == 'Игрок':
         while True:
             try:
@@ -30,15 +30,18 @@ def get_quantity(player, pot, rest_in_pot, max_take, prev_take):
                 print('Введена не цифра. Попробуйте ещё.\n')
 
     elif player == 'Глупый компьютер':
-        return randint(1, min(max_take, pot))
+        return randint(1, min(max_take + 1, rest_in_pot + 1))
 
     # Хитрый компьютер:
-    if rest_in_pot == pot:
-        return pot % max_take - 1
-    elif rest_in_pot > max_take:
-        return min(max_take, rest_in_pot) - prev_take
+    if rest_in_pot > max_take:
+        if rest_in_pot % max_take - 1 == 0:
+            return max_take
+        elif rest_in_pot % max_take - 1 > 0:
+            return rest_in_pot % max_take - 1
+        else:
+            return max_take - 1
     else:
-        return rest_in_pot
+        return min(max_take, rest_in_pot)
 
 
 def check_quantity(num, pot, max_take):
@@ -59,10 +62,12 @@ computer = 'Хитрый компьютер' if input(
     '1 - Легко\n'
     '2 - Сложно\n'
     'Ваш выбор: '
+
+
 ) == '2' else 'Глупый компьютер'
 
 # Жеребьёвка через встроенную случайную сортировку set:
-players = set(['Игрок', computer])
+players = {'Игрок', computer}
 
 print(
     f'\nИгра началась. В банке: {pot} конфет.\n'
@@ -70,12 +75,10 @@ print(
 )
 
 while rest_in_pot > 0:
-    prev_take = 0
     for player in players:
         print(f'Ходит {player}.')
-        num = get_quantity(player, pot, rest_in_pot, max_take, prev_take)
+        num = get_quantity(player, pot, rest_in_pot, max_take)
         rest_in_pot = rest_in_pot - num
-        prev_take = num
         print(f'{player} берёт {num} конфет.')
         print(f'В банке осталось {rest_in_pot} конфет.\n')
         if rest_in_pot == 0:

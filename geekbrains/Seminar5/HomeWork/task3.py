@@ -1,6 +1,7 @@
 # Создайте программу для игры в "Крестики-нолики".
 
 import os
+import platform
 from random import randint
 
 
@@ -69,10 +70,14 @@ def print_fields(field, field_map_num):
 def turn(coord, field, mark, player):
     field[coord[0]][coord[1]] = mark
     print_fields(field, field_map)
+    print('Platform:', platform.system())
 
 
 def clear():
-    return os.system('clear')
+    if platform.system() == "Linux" or platform.system() == "Darwin":
+        return os.system('clear')
+    elif platform.system() == "Windows":
+        return os.system('cls')
 
 
 def check_win(coord, field, mark):
