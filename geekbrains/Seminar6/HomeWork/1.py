@@ -11,6 +11,9 @@
 # 1+2*3 => 7;
 # (1+2)*3 => 9;
 
+import re
+
+
 def split_to_lexemes(problem: str):
     problem = problem.replace(' ', '')
     lexemes = []
@@ -37,17 +40,21 @@ def solve(problem):
         problem = split_to_lexemes(problem)
 
     if '(' in problem:
-        begin = problem.index('(') + 1
-        end = problem.index(')')
+        problem_str = ''.join([str(s) for s in problem])
+        span = re.search(r"\(([0-9_+\-\./* ]+)\)", problem_str).span()
+        begin = span[0] + 1
+        end = span[1] - 1
+
         if begin - 1 == 0:
-            left = []
+            left = ''
         else:
-            left = problem[:begin - 1]
-        if end == len(problem) - 1:
-            right = []
+            left = problem_str[:begin - 1]
+
+        if end == len(problem_str) - 1:
+            right = ''
         else:
-            right = problem[end + 1:]
-        return solve(left + solve(problem[begin:end]) + right)
+            right = problem_str[end + 1:]
+        return solve(left + ''.join([str(s) for s in solve(problem_str[begin:end])]) + right)
 
     for operator in ['*', '/', '+', '-']:
         if operator in problem:
@@ -76,10 +83,11 @@ def solve(problem):
                     return [operand_left - operand_right]
 
 
-problem = '(1 + 1 + 2) * 3 + 12 / (2 * 2 + 1 + 1)'  # = 14
-problem1 = '(1+2)*3'
-problem2 = '1+2*3'
+problem = '(1 + (1 + (2 + 1))) * 3 + 12 / (2 * 2 + 1 + 1)'  # = 17
+# problem = '1 + 1 + 2 + 1 * 3 + 12 / 2 * 2 + 1 + 1'
+# problem1 = '(1+2)*3'
+# problem2 = '1+2*3'
 
 print(problem, '=', *solve(problem))
-print(problem1, '=', *solve(problem1))
-print(problem2, '=', *solve(problem2))
+# print(problem1, '=', *solve(problem1))
+# print(problem2, '=', *solve(problem2))
