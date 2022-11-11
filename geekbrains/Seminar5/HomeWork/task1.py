@@ -4,8 +4,10 @@
 txt = 'КАвбы я бвыла царицей, – моблвила одна девица.'
 letters = 'абв'
 
-translation_map = str.maketrans('.,!-_–:;()', '          ')
-for word in [x for x in txt.translate(translation_map).split()]:
+words_only = [x for x in txt.translate(
+    str.maketrans('.,!-_–:;()', '          ')).split()]
+
+for word in words_only:
     if set(letters.casefold()).issubset(set(word.casefold())):
         txt = txt.replace(word, '').replace('  ', ' ').strip()
 
