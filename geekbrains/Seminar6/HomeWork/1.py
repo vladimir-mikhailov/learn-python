@@ -36,7 +36,7 @@ def solve(problem):
     if problem == []:
         return []
 
-    if type(problem) == str:
+    if isinstance(problem, str):
         problem = split_to_lexemes(problem)
 
     if '(' in problem:
