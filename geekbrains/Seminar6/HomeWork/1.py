@@ -21,7 +21,7 @@ def split_to_lexemes(problem: str):
     for char in problem:
         if char.isdigit() or char == '.':
             acc += char
-        elif acc != '':
+        elif acc:
             lexemes.append(acc)
             lexemes.append(char)
             acc = ''
@@ -56,7 +56,7 @@ def solve(problem):
             right = problem_str[end + 1:]
         return solve(left + ''.join([str(s) for s in solve(problem_str[begin:end])]) + right)
 
-    for operator in ['*', '/', '+', '-']:
+    for operator in ['/', '*', '+', '-']:
         if operator in problem:
             i = problem.index(operator)
             left = problem[:i - 1]
@@ -83,7 +83,7 @@ def solve(problem):
                     return [operand_left - operand_right]
 
 
-problem = '(1 + (1 + (2 + 1))) * 3 + 12 / (2 * 2 + 1 + 1)'  # = 17
+problem = '2*10/2 + (1 + (1 + (2 + 1))) * 3 + 12 / (2 * 2 + 1 + 1)'  # = 17
 # problem = '1 + 1 + 2 + 1 * 3 + 12 / 2 * 2 + 1 + 1'
 # problem1 = '(1+2)*3'
 # problem2 = '1+2*3'
