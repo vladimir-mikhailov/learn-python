@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='utf-8'?>
+<data>
+  <row>
+    <name>Владимир</name>
+    <last_name>Михайлов</last_name>
+    <birth_date>22.08.1984</birth_date>
+    <email>vladimir@mikhailov.in</email>
+    <job>Предприниматель</job>
+    <company>ИП</company>
+    <phone_1>+79991111111</phone_1>
+    <phone_2>+79992222222</phone_2>
+  </row>
+  <row>
+    <name>Никодим</name>
+    <last_name>Партикуляров</last_name>
+    <birth_date>10.10.1904</birth_date>
+    <email>nikodim@yandex.ru</email>
+    <job>Виночерпий</job>
+    <company>Его Величества</company>
+    <phone_1>+79993333333</phone_1>
+    <phone_2/>
+  </row>
+  <row>
+    <name>Тит</name>
+    <last_name>Поляков</last_name>
+    <birth_date>2022-04-19</birth_date>
+    <email>agafonovartem@ao.biz</email>
+    <job>Инженер-конструктор</job>
+    <company>АСР-Углесбыт</company>
+    <phone_1>88780679141</phone_1>
+    <phone_2/>
+  </row>
+  <row>
+    <name>Любим</name>
+    <last_name>Бобылев</last_name>
+    <birth_date>2002-12-01</birth_date>
+    <email>elizaveta1970@ip.org</email>
+    <job>Проректор</job>
+    <company>Мечел</company>
+    <phone_1>+7 (045) 845-77-82</phone_1>
+    <phone_2/>
+  </row>
+  <row>
+    <name>Евдоким</name>
+    <last_name>Тетерин</last_name>
+    <birth_date>2001-09-17</birth_date>
+    <email>martinkonovalov@mumt.info</email>
+    <job>Сурдолог</job>
+    <company>ГК Эталон</company>
+    <phone_1>8 368 664 5190</phone_1>
+    <phone_2/>
+  </row>
+  <row>
+    <name>Василий</name>
+    <last_name>Князев</last_name>
+    <birth_date>1991-10-22</birth_date>
+    <email>nikitinaevpraksija@ao.biz</email>
+    <job>Металлург</job>
+    <company>Восточный экспресс банк</company>
+    <phone_1>8 822 983 81 75</phone_1>
+    <phone_2/>
+  </row>
+  <row>
+    <name>Лев</name>
+    <last_name>Савин</last_name>
+    <birth_date>2007-10-17</birth_date>
+    <email>andreevarkadi@ao.org</email>
+    <job>Автогонщик</job>
+    <company>НПК Уралвагонзавод</company>
+    <phone_1>8 359 117 09 55</phone_1>
+    <phone_2/>
+  </row>
+  <row>
+    <name>Юрий</name>
+    <last_name>Волков</last_name>
+    <birth_date>1982-10-07</birth_date>
+    <email>savinizmail@kudrjashova.com</email>
+    <job>Социолог</job>
+    <company>Лаборатория Касперского</company>
+    <phone_1>+7 300 722 8717</phone_1>
+    <phone_2/>
+  </row>
+  <row>
+    <name>Нифонт</name>
+    <last_name>Сазонов</last_name>
+    <birth_date>1971-01-31</birth_date>
+    <email>filatovrostislav@salim.info</email>
+    <job>Шорник</job>
+    <company>ТГК-16</company>
+    <phone_1>+74800129028</phone_1>
+    <phone_2/>
+  </row>
+  <row>
+    <name>Фотий</name>
+    <last_name>Белозеров</last_name>
+    <birth_date>2007-11-10</birth_date>
+    <email>paramon_17@sorokina.org</email>
+    <job>Диспетчер</job>
+    <company>Урало-Сибирская металлургическая компания</company>
+    <phone_1>+7 174 425 1132</phone_1>
+    <phone_2/>
+  </row>
+  <row>
+    <name>Нестор</name>
+    <last_name>Колобов</last_name>
+    <birth_date>1996-03-14</birth_date>
+    <email>galaktion_93@ao.org</email>
+    <job>Гример</job>
+    <company>Росбанк (Societe General)</company>
+    <phone_1>83858111921</phone_1>
+    <phone_2/>
+  </row>
+  <row>
+    <name>Евсей</name>
+    <last_name>Брагин</last_name>
+    <birth_date>1994-05-09</birth_date>
+    <email>zinovi_66@ao.edu</email>
+    <job>Аналитик</job>
+    <company>Азбука вкуса</company>
+    <phone_1>8 781 068 1674</phone_1>
+    <phone_2/>
+  </row>
+</data>
