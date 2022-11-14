@@ -1,4 +1,5 @@
 from pathlib import Path
+import sys
 
 import model as m
 import view as v
@@ -28,7 +29,7 @@ def get_file_format():
         case '4':
             return 'xlsx'
         case '0':
-            exit()
+            sys.exit()
 
 
 def get_user_data():
@@ -121,4 +122,4 @@ def run():
                     v.print_data('Добавлено 10 случайных пользователей.')
 
             case '0':
-                exit()
+                sys.exit()

@@ -39,7 +39,6 @@ def clear_users():
 
 
 def get_dataframe():
-    global local_data
     if local_data['users']:
         users_with_phones = local_data['users'].copy()
         for user in users_with_phones:
@@ -99,14 +98,12 @@ def export_to_file(file_format):
 
 
 def get_id():
-    global local_data
     if not local_data['users']:
         return 0
     return max([user['user_id'] for user in local_data['users']]) + 1
 
 
 def find_duplicate(user_data):
-    global local_data
     for user in local_data['users']:
         user_no_id = user.copy()
         del user_no_id['user_id']
@@ -117,8 +114,6 @@ def find_duplicate(user_data):
 
 
 def add_user(user_data):
-    global local_data
-
     for user in local_data['users']:
         duplicate_id = find_duplicate(user_data)
         if duplicate_id == -1:
@@ -154,7 +149,6 @@ def add_user(user_data):
 
 
 def generate_random_users():
-    global local_data
     fake = Faker(locale="ru_RU")
 
     for i in range(10):
@@ -172,7 +166,6 @@ def generate_random_users():
 
 
 def get_user(user_id):
-    global local_data
     for user in local_data['users']:
         if user['user_id'] == user_id:
             return user
@@ -180,7 +173,6 @@ def get_user(user_id):
 
 
 def delete_user(user_id):
-    global local_data
     for user in local_data['users']:
         if user['user_id'] == user_id:
             for key in local_data.keys():
