@@ -1,0 +1,122 @@
+[
+    {
+        "name":"Владимир",
+        "last_name":"Михайлов",
+        "birth_date":"22.08.1984",
+        "email":"vladimir@mikhailov.in",
+        "job":"Предприниматель",
+        "company":"ИП",
+        "phone_1":"+79991111111",
+        "phone_2":"+79992222222"
+    },
+    {
+        "name":"Никодим",
+        "last_name":"Партикуляров",
+        "birth_date":"10.10.1904",
+        "email":"nikodim@yandex.ru",
+        "job":"Виночерпий",
+        "company":"Его Величества",
+        "phone_1":"+79993333333",
+        "phone_2":""
+    },
+    {
+        "name":"Тит",
+        "last_name":"Поляков",
+        "birth_date":"2022-04-19",
+        "email":"agafonovartem@ao.biz",
+        "job":"Инженер-конструктор",
+        "company":"АСР-Углесбыт",
+        "phone_1":"88780679141",
+        "phone_2":""
+    },
+    {
+        "name":"Любим",
+        "last_name":"Бобылев",
+        "birth_date":"2002-12-01",
+        "email":"elizaveta1970@ip.org",
+        "job":"Проректор",
+        "company":"Мечел",
+        "phone_1":"+7 (045) 845-77-82",
+        "phone_2":""
+    },
+    {
+        "name":"Евдоким",
+        "last_name":"Тетерин",
+        "birth_date":"2001-09-17",
+        "email":"martinkonovalov@mumt.info",
+        "job":"Сурдолог",
+        "company":"ГК Эталон",
+        "phone_1":"8 368 664 5190",
+        "phone_2":""
+    },
+    {
+        "name":"Василий",
+        "last_name":"Князев",
+        "birth_date":"1991-10-22",
+        "email":"nikitinaevpraksija@ao.biz",
+        "job":"Металлург",
+        "company":"Восточный экспресс банк",
+        "phone_1":"8 822 983 81 75",
+        "phone_2":""
+    },
+    {
+        "name":"Лев",
+        "last_name":"Савин",
+        "birth_date":"2007-10-17",
+        "email":"andreevarkadi@ao.org",
+        "job":"Автогонщик",
+        "company":"НПК Уралвагонзавод",
+        "phone_1":"8 359 117 09 55",
+        "phone_2":""
+    },
+    {
+        "name":"Юрий",
+        "last_name":"Волков",
+        "birth_date":"1982-10-07",
+        "email":"savinizmail@kudrjashova.com",
+        "job":"Социолог",
+        "company":"Лаборатория Касперского",
+        "phone_1":"+7 300 722 8717",
+        "phone_2":""
+    },
+    {
+        "name":"Нифонт",
+        "last_name":"Сазонов",
+        "birth_date":"1971-01-31",
+        "email":"filatovrostislav@salim.info",
+        "job":"Шорник",
+        "company":"ТГК-16",
+        "phone_1":"+74800129028",
+        "phone_2":""
+    },
+    {
+        "name":"Фотий",
+        "last_name":"Белозеров",
+        "birth_date":"2007-11-10",
+        "email":"paramon_17@sorokina.org",
+        "job":"Диспетчер",
+        "company":"Урало-Сибирская металлургическая компания",
+        "phone_1":"+7 174 425 1132",
+        "phone_2":""
+    },
+    {
+        "name":"Нестор",
+        "last_name":"Колобов",
+        "birth_date":"1996-03-14",
+        "email":"galaktion_93@ao.org",
+        "job":"Гример",
+        "company":"Росбанк (Societe General)",
+        "phone_1":"83858111921",
+        "phone_2":""
+    },
+    {
+        "name":"Евсей",
+        "last_name":"Брагин",
+        "birth_date":"1994-05-09",
+        "email":"zinovi_66@ao.edu",
+        "job":"Аналитик",
+        "company":"Азбука вкуса",
+        "phone_1":"8 781 068 1674",
+        "phone_2":""
+    }
+]
