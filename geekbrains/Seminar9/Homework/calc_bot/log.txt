@@ -1,0 +1,8 @@
+2022-11-24 23:40:27,604 - telegram.ext._application - INFO - Application started
+2022-11-24 23:41:21,007 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2022-11-24 23:41:21,007 - telegram.ext._application - INFO - Application.stop() complete
+2022-11-24 23:41:22,062 - telegram.ext._application - INFO - Application started
+2022-11-24 23:41:36,681 - root - INFO - Считаем: 2*10/2 + (1 + (1 + (2 + 1))) * 34 + 12 / (2 * 2 + 1 + 1)
+2022-11-24 23:41:36,682 - root - INFO - Посчитали: 182.0
+2022-11-24 23:42:02,137 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2022-11-24 23:42:02,138 - telegram.ext._application - INFO - Application.stop() complete
