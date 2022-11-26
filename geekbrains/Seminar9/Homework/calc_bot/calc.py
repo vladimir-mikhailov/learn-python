@@ -36,9 +36,16 @@ def solve(problem):
     if problem == []:
         return []
 
+    try:
+        float(problem)
+        return problem
+    except TypeError or ValueError:
+        pass
+
     if isinstance(problem, str):
         problem = split_to_lexemes(problem)
 
+    # FIXME не работает со скобками (2+3*2)
     if '(' in problem:
         problem_str = ''.join([str(s) for s in problem])
         span = re.search(r"\(([0-9_+\-\./* ]+)\)", problem_str).span()
@@ -54,7 +61,14 @@ def solve(problem):
             right = ''
         else:
             right = problem_str[end + 1:]
-        return solve(left + ''.join([str(s) for s in solve(problem_str[begin:end])]) + right)
+        middle = solve(problem_str[begin:end])
+        print(solve(middle))
+        if left and right:
+            return solve(split_to_lexemes(left) + middle + split_to_lexemes(right))
+        elif left:
+            return solve(split_to_lexemes(left).append(middle))
+        elif right:
+            return solve(middle.append(split_to_lexemes(right)))
 
     for operator in ['/', '*', '+', '-']:
         if operator in problem:
@@ -83,11 +97,11 @@ def solve(problem):
                     return [operand_left - operand_right]
 
 
-# problem = '2*10/2 + (1 + (1 + (2 + 1))) * 3 + 12 / (2 * 2 + 1 + 1)'  # = 17
+problem = '(2+3*2)'
 # problem = '1 + 1 + 2 + 1 * 3 + 12 / 2 * 2 + 1 + 1'
 # problem1 = '(1+2)*3'
 # problem2 = '1+2*3'
 
-# print(problem, '=', *solve(problem))
+print(problem, '=', *solve(problem))
 # print(problem1, '=', *solve(problem1))
 # print(problem2, '=', *solve(problem2))

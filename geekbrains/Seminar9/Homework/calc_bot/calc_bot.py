@@ -15,7 +15,8 @@ if __name__ == '__main__':
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO,
-    filename='log.txt'
+    # filename='log.txt',
+    # encoding='utf8'
 )
 
 
@@ -70,7 +71,7 @@ async def help(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     logging.log(msg='Считаем: ' + update.message.text, level=logging.INFO)
-    reply = round(calc.solve(update.message.text)[0], 2)
+    reply = round(calc.solve(str(update.message.text))[0], 2)
     logging.log(msg='Результат: ' + str(reply), level=logging.INFO)
     await context.bot.send_message(chat_id=update.effective_chat.id, text=reply)
 

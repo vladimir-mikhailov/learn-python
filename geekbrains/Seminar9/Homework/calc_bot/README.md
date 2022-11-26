@@ -5,7 +5,7 @@
 This installs the pre-release of v20 python-telegram-bot
 
 ```bash
-pip install -r requirements.txt
+pip install python-telegram-bot --pre
 ```
 
 ## Run with your Token
